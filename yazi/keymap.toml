@@ -1,0 +1,12 @@
+# ~/.config/yazi/keymap.toml
+#eza-preview stuff
+
+[[mgr.prepend_keymap]]
+on = [ "E", "g" ]
+run = "plugin eza-preview toggle-git"
+desc = "Preview git"
+
+[[mgr.prepend_keymap]]
+on = [ "E", "t" ]
+run = "plugin eza-preview toggle-tree"
+desc = "Preview tree"

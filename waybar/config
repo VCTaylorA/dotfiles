@@ -1,0 +1,49 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "bluetooth", "battery"],
+
+
+
+  "network": {
+    "interface": "wlan0",
+    "format-wifi": "󰤥 {essid}",
+    "format-ethernet": "󰈀 Wired",
+    "format-disconnected": "󰤯 Disconnected",
+    "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\nSignal: {signalStrength}%",
+    "on-click": "~/.config/waybar/scripts/wifi-wofi.sh"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/bluetooth-wofi.sh"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰸈 Muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "~/.config/waybar/scripts/volume-wofi.sh"
+  },
+
+
+    "battery": {
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "exec": "~/.config/waybar/scripts/battery-info.sh",
+      "format": "{icon} {capacity}% - {time}",
+      "format-charging": "󰂄 {capacity}%",
+      "format-plugged": "󰂄 {capacity}%",
+      "tooltip-format-charging": "Time to full: {time}",
+      "tooltip-format-discharging": "Time remaining: {time}",
+      "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    }
+  }
+

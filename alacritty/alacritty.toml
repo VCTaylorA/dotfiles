@@ -1,0 +1,53 @@
+# Alacritty configuration file in TOML format
+
+# Font settings
+[font]
+  # Normal (roman) font face
+  [font.normal]
+  family = "Hurmit Nerd Font Mono"
+  style = "Regular"
+
+  # Bold font face
+  [font.bold]
+  family = "Hurmit Nerd Font Mono"
+  style = "Bold"
+
+  # Italic font face
+  [font.italic]
+  family = "Hurmit Nerd Font Mono"
+  style = "Italic"
+
+# Colors (Gruvbox theme)
+[colors]
+  # Default colors
+  [colors.primary]
+  background = "#1d2021"  # Dark gray background
+  foreground = "#d5c4a1"  # Light beige text
+
+  # Cursor colors
+  [colors.cursor]
+  text = "#1d2021"  # Dark gray cursor text
+  cursor = "#d5c4a1"  # Light beige cursor
+
+  # Normal colors
+  [colors.normal]
+  black   = "#282828"  # Dark black
+  red     = "#cc241d"  # Dark red
+  green   = "#98971a"  # Olive green
+  yellow  = "#d79921"  # Mustard yellow
+  blue    = "#458588"  # Soft blue
+  magenta = "#b16286"  # Dark purple
+  cyan    = "#689d6a"  # Soft greenish cyan
+  white   = "#a89984"  # Light beige
+
+  # Bright colors
+  [colors.bright]
+  black   = "#928374"  # Light gray
+  red     = "#fb4934"  # Bright red
+  green   = "#b8bb26"  # Bright green
+  yellow  = "#fabd2f"  # Bright yellow
+  blue    = "#83a598"  # Bright blue
+  magenta = "#d3869b"  # Bright purple
+  cyan    = "#8ec07c"  # Bright cyan
+  white   = "#ebdbb2"  # Almost white
+

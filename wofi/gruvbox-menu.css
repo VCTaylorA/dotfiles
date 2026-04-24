@@ -1,0 +1,42 @@
+/* Wofi style for menus with Gruvbox colors */
+
+window {
+    background-color: #1d2021;
+    border: 2px solid #458588;
+    border-radius: 5px;
+    font-family: "Hurmit Nerd Font Mono";
+}
+
+#input {
+    background-color: #282828;
+    color: #d5c4a1;
+    border: none;
+    padding: 5px;
+}
+
+#inner-box {
+    background-color: #1d2021;
+    color: #d5c4a1;
+}
+
+#outer-box {
+    background-color: #1d2021;
+    padding: 10px;
+}
+
+#scroll {
+    background-color: #1d2021;
+}
+
+#text {
+    color: #d5c4a1;
+}
+
+#entry:selected {
+    background-color: #fabd2f; /* Bright yellow for selection */
+    color: #1d2021; /* Dark background for selected text */
+}
+
+#entry:selected #text {
+    color: #1d2021;
+}

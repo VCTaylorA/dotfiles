@@ -1,0 +1,31 @@
+# ignore everything
+*
+# allow specific configs (directories and files)
+
+!hyfetch.json
+!nvim/
+!alacritty/
+!fastfetch/
+!ncspot/
+!nvim/
+!sway/
+!sway-qt/
+!waybar/
+!wofi/
+!yazi/
+#ignore yazi plugins
+
+# allow their contents (for directories)
+!nvim/**
+!alacritty/**
+!fastfetch/**
+!ncspot/**
+!nvim/**
+!sway/**
+!sway-qt/**
+!waybar/**
+!wofi/**
+!yazi/**
+
+# always keep this file
+!.gitignore

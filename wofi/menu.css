@@ -1,0 +1,13 @@
+window {
+  background: #282828;
+  border-radius: 8px;
+}
+
+#entry {
+  padding: 6px;
+}
+
+#entry:selected {
+  background: #83a598;
+  color: #282828;
+}

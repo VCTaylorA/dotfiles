@@ -1,0 +1,24 @@
+# ~/.config/yazi/yazi.toml
+
+[manager]
+show_hidden = false
+
+# ===== OPENERS =====
+[opener]
+pdf = [
+    { run = 'okular %s', orphan = true, desc = "PDF" }
+]
+
+# NOTE: DO NOT define a text opener
+# Let Yazi use its default ($EDITOR → nvim)
+
+# ===== RULES (extend, don't override) =====
+[open]
+prepend_rules = [
+    { mime = "application/pdf", use = "pdf" }
+]
+
+[plugin]
+prepend_previewers = [
+    { name = "*", run = "eza-preview" }
+]
