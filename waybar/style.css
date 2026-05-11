@@ -1,31 +1,184 @@
+@define-color red   #fb4934;
+@define-color org   #fe8019;
+@define-color ylw   #fabd2f;
+@define-color grn   #b8bb26;
+@define-color cyn   #8ec07c;
+@define-color blu   #83a598;
+@define-color mag   #d3869b;
+@define-color bg    #1d2021;
+@define-color blk   #282828;
+@define-color brblk #928374;
+@define-color fg    #ebdbb2;
+@define-color white #fbf1c7;
+
 * {
-  font-family: "Hurmit Nerd Font Mono",monospace;
-  font-size: 13px;
+    font-family: "Hurmit Nerd Font Mono", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
 }
 
 window#waybar {
-  background: #282828;
-  color: #ebdbb2;
+    background-color: @bg;
+    color: @fg;
+}
+
+/* =========================
+   WORKSPACES
+   ========================= */
+
+#workspaces {
+    margin: 0 2px;
+}
+
+#workspaces button {
+    min-width: 0;
+    padding: 0 4px;
+    margin: 2px 1px;
+    color: @brblk;
+    background: transparent;
+    border-radius: 4px;
+}
+
+#workspaces button.empty {
+    background: transparent;
+    color: @brblk;
+}
+
+#workspaces button:not(.empty) {
+    background: @blk;
+    color: @fg;
+}
+
+#workspaces button.urgent {
+    background: @red;
+    color: @bg;
+}
+
+#workspaces button:hover:not(.focused) {
+    background: @ylw;
+    color: @bg;
 }
 
 #workspaces button.focused {
-  background: #fabd2f;
-  color: #282828;
+    background: @white;
+    color: @bg;
 }
+
+/* =========================
+   WINDOW TITLE
+   ========================= */
+
+#window {
+    color: @fg;
+    padding: 0 12px;
+}
+
+/* =========================
+   COMMON MODULE PADDING
+   ========================= */
 
 #clock,
 #battery,
+#cpu,
+#memory,
 #network,
+#bluetooth,
 #pulseaudio,
+#custom-gpu {
+    padding: 0 10px;
+}
+
+/* =========================
+   CLOCK / AUDIO
+   ========================= */
+
+#clock {
+    color: @white;
+    border-bottom: 3px solid @white;
+}
+
+#pulseaudio {
+    color: @mag;
+    border-bottom: 3px solid @mag;
+}
+
+#pulseaudio.muted {
+    color: @brblk;
+}
+
+/* =========================
+   BATTERY
+   ========================= */
+
+#battery {
+    color: @grn;
+    border-bottom: 3px solid @grn;
+}
+
+#battery.warning {
+    color: @ylw;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+/* =========================
+   CPU
+   ========================= */
+
+#cpu {
+    color: @red;
+    border-bottom: 3px solid @red;
+}
+
+/* =========================
+   MEMORY
+   ========================= */
+
+#memory {
+    color: @ylw;
+    border-bottom: 3px solid @ylw;
+}
+
+/* =========================
+   NETWORK
+   ========================= */
+
+#network {
+    color: @cyn;
+    border-bottom: 3px solid @cyn;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+/* =========================
+   BLUETOOTH
+   ========================= */
+
 #bluetooth {
-  padding: 0 10px;
+    color: @blu;
+    border-bottom: 3px solid @blu;
 }
 
-tooltip {
-  background-color: #282828;
-  border-radius: 4px;
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @brblk;
 }
 
-tooltip label {
-  color: #ebdbb2;
+#bluetooth.connected {
+    color: @cyn;
+}
+
+/* =========================
+   GPU
+   ========================= */
+
+#custom-gpu {
+    color: @org;
+    border-bottom: 3px solid @org;
 }

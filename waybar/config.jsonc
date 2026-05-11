@@ -1,0 +1,105 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+	"spacing": 4,
+	"modules-left": [
+		"sway/workspaces"
+	],
+	"modules-center": [
+		"sway/window"
+	],
+	"modules-right": [
+		"cpu",
+		"custom/gpu",
+		"memory",
+		"battery",
+		"network",
+		"bluetooth",
+		"pulseaudio",
+		"clock"
+	],
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{name}",
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": []
+		}
+	},
+	"sway/window": {
+		"max-length": 60
+	},
+	"bluetooth": {
+		"format": "",
+		"format-disabled": "󰂲",
+		"format-off": "󰂲",
+		"format-connected": " {device_alias}",
+		"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+		"tooltip-format": "{controller_alias}\n\n{num_connections} connected",
+		"tooltip-format-connected": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
+		"on-click": "blueman-manager"
+	},
+	"network": {
+		"format-wifi": "{essid} ",
+		"format-ethernet": "󰈀 Ethernet",
+		"format-disconnected": "󰖪 Offline",
+		"tooltip-format": "{ipaddr}",
+		"on-click": "nm-connection-editor"
+	},
+	"pulseaudio": {
+		"format": " {volume}%",
+		"format-muted": " muted",
+		"on-click": "pavucontrol",
+		"scroll-step": 5
+	},
+	"cpu": {
+		"format": " {usage}%",
+		"tooltip": false
+	},
+
+	"memory": {
+		"format": " {used}GiB",
+		"tooltip": true,
+		"tooltip-format": "Memory: {used}GiB / {total}GiB"
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": " {capacity}%",
+		"format-icons": [
+			"󰂎",
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+			"󰁿",
+			"󰂀",
+			"󰂁",
+			"󰂂",
+			"󰁹"
+		],
+		"on-click": "~/.config/sway/scripts/power-profile-menu.sh",
+		"tooltip": true,
+		"tooltip-format": "Battery: {capacity}%\nTime: {time}\nHealth: {health}%"
+	},
+	"clock": {
+		"format": " {:%H:%M}",
+		"format-alt": " {:%A, %B %-d}"
+	},
+	"custom/gpu": {
+		"exec": "~/.config/waybar/scripts/gpu.sh",
+		"interval": 1,
+		"format": "󰠠 {0}%",
+		"format-alt": " {1}G"
+	}
+}
