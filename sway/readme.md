@@ -1,15 +1,38 @@
 # TODO
-- add screenshot utility
-    -grim
-- pic preview
-    - swappy (WITH GRIM!)
-- configure lf to use aforementioned
-- fix wifi menu
-- fix battery "remaining time" indicator
-- move wofi wifi and bluetooth to top right
-- add volume controls
-- enable wifi auto reboot/prevent shutdown when lid closed
+- configure yazi to display previews (uberzug or sometihng?)
 - better quick file search (textbooks)
-- add quit option to lf that cd into set directory
 - add easy to config displays for second monitor
+- GTK theming:
+    - fix blue bar in mozillla firefox? (???)
+
+
+
+## idle and lid
+- when lid is closed....
+    - sleep?
+    - reboot via sddm (at leasst, after certain amount of time)
+    - lid led turns off (or only beeps when specific notifications occur?)
+
+## Wayland issues
+- vscode freezing :(
+
+## waybar
+- make symbol fonts in waybar bigger
+- arrange sections by color
+- add usage for gpu/dgpu
+
+- fix battery "remaining time" indicator
+    - onclick: ad power profiles and battery health (wofi?)
+- power off menu:
+    - sleep
+    - hibernate
+    - logoff
+    - shutdown
+    - reboot
+    - update and reboot
+    - update and shutdown
+
+- time
+    - add date (day number, day of week)
+
 
