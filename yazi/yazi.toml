@@ -18,7 +18,4 @@ prepend_rules = [
     { mime = "application/pdf", use = "pdf" }
 ]
 
-[plugin]
-prepend_previewers = [
-    { name = "*", run = "eza-preview" }
-]
+
